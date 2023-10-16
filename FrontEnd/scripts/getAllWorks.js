@@ -1,19 +1,12 @@
-let array_All_Works = [];
-
-const gallery = document.querySelector(".gallery");
-
-// Récupération de tous les travaux
-const fetch_All_Works = async () => {
+// Récupération et affichage de tous les travaux
+const getAllWorks = async () => {
+  // Récupération de tous les travaux
   await fetch("http://localhost:5678/api/works")
     .then((res) => {
       return res.json();
     })
     .then((res_json) => (array_All_Works = res_json));
-};
 
-// Affichage des travaux
-const worksDisplay = async () => {
-  await fetch_All_Works();
   gallery.innerHTML = array_All_Works
     .map(
       (card_work) =>
@@ -29,5 +22,3 @@ const worksDisplay = async () => {
     )
     .join("");
 };
-
-worksDisplay();
