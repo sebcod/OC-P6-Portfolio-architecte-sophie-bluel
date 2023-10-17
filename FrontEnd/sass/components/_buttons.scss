@@ -1,0 +1,51 @@
+input[type="submit"] {
+    text-align: center;
+    font-family: "Syne";
+    font-weight: 700;
+    font-size: 1.2em;
+    color: $colorWhite;
+    background-color: $color2;
+    margin: 2em auto;
+    width: 180px;
+    height: 50px;
+    border-radius: 60px;
+    border: none;
+    box-shadow: $boxShadow;
+
+
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.2);
+    }
+}
+
+#portfolio input {
+    font-size: 1em;
+    padding: 0 20px;
+    width: fit-content;
+    height: 37px;
+    min-width: 100px;
+    margin: 2em 10px;
+    border: solid 1px #1d6154;
+    color: #1d6154;
+    background-color: transparent;
+
+    &:hover {
+        padding: 0 20px;
+        width: fit-content;
+        min-width: 100px;
+        margin: 2em 10px;
+    }
+}
+
+#portfolio .BtnFilterActive {
+    border: none;
+    color: white;
+    background-color: #1d6154;
+}
+
+#login input[type="submit"] {
+    font-size: 1em;
+    height: auto;
+    padding: 10px;
+}

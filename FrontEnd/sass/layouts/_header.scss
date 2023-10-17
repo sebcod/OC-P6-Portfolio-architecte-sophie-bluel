@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    //border: solid 1px red;
+    max-width: 1140px;
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+    h1 {
+        //padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        font-family: "Syne";
+        font-size: 22px;
+        font-weight: 800;
+        color: $color1;
+
+
+        &>span {
+            font-family: "Work Sans";
+            font-size: 10px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+    }
+
+
+    nav {
+
+        ul {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+
+            li {
+                padding: 0 10px;
+                font-size: 1.2em;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            a:hover {
+                color: $color1;
+            }
+        }
+
+    }
+
+
+}
+
+#nav-Activited-Link {
+    color: $color-Nav-Activited-Link;
+    font-weight: 900;
+}
