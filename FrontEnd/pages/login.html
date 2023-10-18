@@ -28,12 +28,13 @@
     <main>
       <section id="login">
         <h2>log in</h2>
-        <form action="#" method="post">
+        <p class="login_error_message"></p>
+        <form action="" method="">
           <label for="email">E-mail</label>
           <input type="email" name="email" id="email" />
           <label for="password">Mot de passe</label>
           <input type="password" name="password" id="password" />
-          <input type="submit" value="Se connecter" />
+          <input type="submit" value="Se connecter" id="submit" />
           <a href="#">Mot de passe oublié</a>
         </form>
       </section>
@@ -46,8 +47,6 @@
         </ul>
       </nav>
     </footer>
-    <script src="./scripts/getAllWorks.js"></script>
-    <script src="./scripts/setFiltersWorks.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="../scripts/login.js"></script>
   </body>
 </html>

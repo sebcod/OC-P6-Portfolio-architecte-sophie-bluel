@@ -10,6 +10,11 @@
 
     & a {
         text-align: center;
+        color: $colorBlack;
+
+        &:hover {
+            color: $color1;
+        }
     }
 
     h2 {
@@ -18,9 +23,11 @@
 
     & input[type="email"],
     & input[type="password"] {
+        padding: 0 15px;
         height: 50px;
         box-shadow: $boxShadow;
         border: none;
+        font-family: "Work Sans";
 
         &:focus {
             outline: solid 1px $color1;
@@ -37,5 +44,9 @@
     & label {
         margin: 2em 0 0.5em 0;
         font-weight: 500;
+    }
+
+    p {
+        color: red;
     }
 }

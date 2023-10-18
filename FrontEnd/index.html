@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/945991a66c.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap"
       rel="stylesheet"
@@ -14,13 +18,18 @@
     <link rel="stylesheet" href="./sass/main.css" />
   </head>
   <body>
-    <header>
+    <div class="banner_edit_mode">
+      <i class="fa-solid fa-pen-to-square"> <span>Mode édition</span></i>
+    </div>
+    <header class="header">
       <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
       <nav>
         <ul>
           <li><a href="#portfolio">projets</a></li>
           <li><a href="#contact">contact</a></li>
-          <li><a href="./pages/login.html">login</a></li>
+          <li>
+            <a href="./pages/login.html" class="nav_login_logout">login</a>
+          </li>
           <li><img src="./assets/icons/instagram.png" alt="Instagram" /></li>
         </ul>
       </nav>
@@ -50,7 +59,12 @@
         </article>
       </section>
       <section id="portfolio">
-        <h2>Mes Projets</h2>
+        <div class="portfolio_container">
+          <h2>Mes Projets</h2>
+          <div class="update_projects update_projects_hidden">
+            <i class="fa-solid fa-pen-to-square"> <span>modifier</span></i>
+          </div>
+        </div>
 
         <!-- création du conteneur des boutons des filtres -->
         <div class="filters_container"></div>
@@ -61,7 +75,7 @@
       <section id="contact">
         <h2>Contact</h2>
         <p>Vous avez un projet ? Discutons-en !</p>
-        <form action="#" method="post">
+        <form action="" method="">
           <label for="name">Nom</label>
           <input type="text" name="name" id="name" />
           <label for="email">E-mail</label>
@@ -80,6 +94,7 @@
         </ul>
       </nav>
     </footer>
+    <script src="./scripts/homepage_edit_mode.js"></script>
     <script src="./scripts/getAllWorks.js"></script>
     <script src="./scripts/setFiltersWorks.js"></script>
     <script src="./scripts/main.js"></script>

@@ -12,4 +12,9 @@ footer nav ul {
     display: flex;
     justify-content: flex-end;
     font-weight: 300;
+
+    li:hover {
+        cursor: pointer;
+        color: $color1;
+    }
 }
