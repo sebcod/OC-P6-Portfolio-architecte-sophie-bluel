@@ -1,5 +1,9 @@
 // gestion de l'affichage des travaux avec les filtres
+
 const setFiltersWorks = () => {
+  const gallery = document.querySelector(".gallery");
+  const filter_container = document.querySelector(".filters_container");
+
   // création d'un tableau de valeur unique pour les catégories
   let arrayOfCategory = new Set();
 

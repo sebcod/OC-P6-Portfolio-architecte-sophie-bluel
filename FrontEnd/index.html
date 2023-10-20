@@ -17,7 +17,34 @@
     <meta name="description" content="" />
     <link rel="stylesheet" href="./sass/main.css" />
   </head>
-  <body>
+  <body id="body">
+    <div class="backdropFilter hidden"></div>
+    <div class="modal-create-delete-works hidden">
+      <nav class="modal-create-delete-works__header">
+        <i class="fa-solid fa-arrow-left arrow-left-modal hidden"></i>
+        <i class="fa-solid fa-xmark cross-modal"></i>
+      </nav>
+      <section class="modal-create-delete-works__body-delete">
+        <h2>Galerie photo</h2>
+        <div class="delete-works-thumbnails-container"></div>
+        <div class="modal__line"></div>
+        <input type="submit" value="Ajouter une photo" class="btn-add-works" />
+      </section>
+      <section class="modal-create-delete-works__body-create hidden">
+        <h2>Ajout photo</h2>
+        <form action="">
+          <input type="image" />
+          <label for="title">Titre</label>
+          <input type="text" id="title" />
+          <label for="category-select">Catégorie</label>
+          <select name="category" id="category-select">
+            <option value="">Catégorie</option>
+          </select>
+        </form>
+        <div class="modal__line"></div>
+        <input type="submit" value="Valider" class="btn-add-works-validate" />
+      </section>
+    </div>
     <div class="banner_edit_mode">
       <i class="fa-solid fa-pen-to-square"> <span>Mode édition</span></i>
     </div>
@@ -94,9 +121,12 @@
         </ul>
       </nav>
     </footer>
-    <script src="./scripts/homepage_edit_mode.js"></script>
+
     <script src="./scripts/getAllWorks.js"></script>
+    <script src="./scripts/homepage_edit_mode.js"></script>
     <script src="./scripts/setFiltersWorks.js"></script>
+    <script src="./scripts/deleteWork.js"></script>
+    <script src="./scripts/modal_create_delete.js"></script>
     <script src="./scripts/main.js"></script>
   </body>
 </html>

@@ -11,7 +11,7 @@ input[type="submit"] {
     border-radius: 60px;
     border: none;
     box-shadow: $boxShadow;
-
+    transition: background-color 0.2s;
 
     &:hover {
         background-color: $color3;
@@ -31,6 +31,7 @@ input[type="submit"] {
     border: solid 1px #1d6154;
     color: #1d6154;
     background-color: transparent;
+    transition: background-color 0.2s;
 
     &:hover {
         background-color: $color3;

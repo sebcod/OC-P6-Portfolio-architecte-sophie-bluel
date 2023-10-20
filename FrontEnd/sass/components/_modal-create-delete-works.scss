@@ -1,0 +1,97 @@
+.modal-create-delete-works {
+    z-index: 10;
+    position: fixed;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 630px;
+    min-height: 688px;
+    border-radius: 10px;
+    box-shadow: $boxShadow;
+    background: $colorWhite;
+    text-align: center;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 26px 30px 13px;
+        font-size: 1.5em;
+
+        .cross-modal {
+            margin-left: auto;
+        }
+    }
+
+    &__body-delete {
+        //border: solid 1px;
+        margin: 0;
+
+        h2 {
+            margin-bottom: 46px;
+            //border: solid 1px;
+        }
+
+        .delete-works-thumbnails-container {
+            margin: auto;
+            //border: solid 1px;
+            width: 420px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-column-gap: 6px;
+            grid-row-gap: 30px;
+            align-content: center;
+            margin-bottom: 65px;
+
+            figure {
+                position: relative;
+                height: fit-content;
+
+                img {
+                    width: 100%;
+                }
+
+                .icon_delete {
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    width: 17px;
+                    height: 17px;
+                    background: $colorBlack;
+                    border-radius: 5px;
+
+                    i {
+                        position: relative;
+                        top: 0.5px;
+                        color: $colorWhite;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+
+        .btn-add-works {
+            margin-bottom: 45px;
+        }
+    }
+
+    .modal__line {
+        width: 420px;
+        height: 1px;
+        background: $color_Bg_ligne_modal;
+        margin: auto;
+    }
+
+    &__body-create {
+        text-align: center;
+        margin: 0;
+
+        h2 {
+            margin-bottom: 46px;
+        }
+
+        .works__container {
+            border: solid 1px;
+            width: 420px;
+            height: 420px;
+        }
+    }
+}
