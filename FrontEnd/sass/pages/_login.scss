@@ -46,7 +46,10 @@
         font-weight: 500;
     }
 
-    p {
+    .login_error_message {
         color: red;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
