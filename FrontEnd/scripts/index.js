@@ -9,7 +9,6 @@ const initDisplay = async () => {
 
   // Récupération des toutes les catégories depuis l'API
   await getAllCategory();
-  console.log(array_All_Category);
 
   // Création et affichage des boutons de filtres
   setFiltersWorks();

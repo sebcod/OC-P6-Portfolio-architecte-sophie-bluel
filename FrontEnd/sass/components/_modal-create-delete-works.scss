@@ -4,7 +4,7 @@
     top: 50vh;
     transform: translateY(-50%);
     width: 630px;
-    min-height: 688px;
+    //min-height: 688px;
     border-radius: 10px;
     box-shadow: $boxShadow;
     background: $colorWhite;
@@ -81,18 +81,6 @@
 
     /* ------------------- body create ------------------- */
     &__body-create {
-        //border: solid 1px red;
-
-        form {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-
-
-    &__body-create {
         text-align: center;
         margin: 0;
 
@@ -103,11 +91,18 @@
         }
 
         form {
+            display: flex;
+            flex-direction: column;
             justify-content: space-between;
             margin: auto;
             width: 420px;
             height: 420px;
             margin-bottom: 45px;
+
+            .msg-work-send {
+                color: green;
+                font-weight: 600;
+            }
 
             .drop-zone-img {
                 width: 100%;

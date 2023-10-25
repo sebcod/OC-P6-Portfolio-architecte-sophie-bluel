@@ -169,7 +169,6 @@ html {
   top: 50vh;
   transform: translateY(-50%);
   width: 630px;
-  min-height: 688px;
   border-radius: 10px;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
   background: white;
@@ -233,12 +232,6 @@ html {
 .modal-create-delete-works__body-delete .btn-add-works {
   margin-bottom: 45px;
 }
-.modal-create-delete-works__body-create form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 .modal-create-delete-works__body-create {
   text-align: center;
   margin: 0;
@@ -249,11 +242,17 @@ html {
   font-weight: 400;
 }
 .modal-create-delete-works__body-create form {
+  display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: auto;
   width: 420px;
   height: 420px;
   margin-bottom: 45px;
+}
+.modal-create-delete-works__body-create form .msg-work-send {
+  color: green;
+  font-weight: 600;
 }
 .modal-create-delete-works__body-create form .drop-zone-img {
   width: 100%;

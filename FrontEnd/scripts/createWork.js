@@ -105,10 +105,10 @@ const createWork = () => {
 
   // envoie de la requête à l'API
   const requestCreate = async () => {
-    const formulaire = new FormData();
-    formulaire.append("image", inputImg.files[0]);
-    formulaire.append("title", inputTitle.value);
-    formulaire.append("category", inputCategory.value);
+    const bodyData = new FormData();
+    bodyData.append("image", inputImg.files[0]);
+    bodyData.append("title", inputTitle.value);
+    bodyData.append("category", inputCategory.value);
 
     await fetch("http://localhost:5678/api/works", {
       method: "POST",
@@ -117,12 +117,20 @@ const createWork = () => {
           "Sophie_Bluel_Architecte_JWT"
         )}`,
       },
-      body: formulaire,
+      body: bodyData,
     }).then(async (res) => {
       if (res.ok) {
         // on récupére de nouveau tous les travaux depuis l'API
-        // on met à jours la page d'accueil
+        // on met à jours array_All_Works = []
         await getAllWorks();
+
+        // affichage d'un message d'envoi
+        const msgWorkSend = document.querySelector(".msg-work-send");
+        msgWorkSend.textContent = "Projet ajouté au portfolio";
+
+        // on vide les champs du fomulaire
+        document.getElementById("form-create").reset();
+        showImg();
       }
     });
   };
