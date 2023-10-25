@@ -109,6 +109,7 @@ const createWork = () => {
     bodyData.append("image", inputImg.files[0]);
     bodyData.append("title", inputTitle.value);
     bodyData.append("category", inputCategory.value);
+    console.log(bodyData);
 
     await fetch("http://localhost:5678/api/works", {
       method: "POST",

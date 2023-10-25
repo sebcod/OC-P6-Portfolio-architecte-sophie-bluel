@@ -2,7 +2,7 @@
 
 // ajout d'un événemet au clique aux miniatures
 // suppression du travail sélectionnés
-const all_works_forEach_addEvent_delete = async (all_works_thumbnails) => {
+const deleteWork = async (all_works_thumbnails) => {
   all_works_thumbnails.forEach((works_removable) => {
     works_removable.addEventListener("click", async () => {
       await fetch(
@@ -21,7 +21,7 @@ const all_works_forEach_addEvent_delete = async (all_works_thumbnails) => {
           // on met à jours la page d'accueil
           await getAllWorks();
           // on met à jour l'affichages des miniatures
-          display_delete_works_container_thumbnails();
+          display_delete_thumbnails();
         }
       });
     });
@@ -29,7 +29,7 @@ const all_works_forEach_addEvent_delete = async (all_works_thumbnails) => {
 };
 
 // affichage des travaux supprimables en miniatures dans la modale
-const display_delete_works_container_thumbnails = () => {
+const display_delete_thumbnails = () => {
   // récupération de la div des miniatures
   const delete_works_container_thumbnails = document.querySelector(
     ".delete-works-thumbnails-container"
@@ -58,5 +58,5 @@ const display_delete_works_container_thumbnails = () => {
   );
 
   // ajout des événements delete au click sur les miniatures
-  all_works_forEach_addEvent_delete(all_works_thumbnails);
+  deleteWork(all_works_thumbnails);
 };

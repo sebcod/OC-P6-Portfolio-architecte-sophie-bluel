@@ -43,13 +43,14 @@ const modal_create_delete = () => {
 
   // retour à la section delete
   modal_arrow_left.addEventListener("click", () => {
+    display_delete_thumbnails();
     modal_body_delete.classList.remove("hidden");
     modal_body_create.classList.add("hidden");
     modal_arrow_left.classList.add("hidden");
   });
 
   // affichage des travaux en miniatures à supprimer dans la modale
-  display_delete_works_container_thumbnails();
+  display_delete_thumbnails();
 
   // gestion de la création d'un nouveau travail
   createWork();
