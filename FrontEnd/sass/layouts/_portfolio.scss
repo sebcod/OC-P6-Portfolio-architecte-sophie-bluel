@@ -1,0 +1,44 @@
+#portfolio h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio_container {
+    position: relative;
+}
+
+.update_projects {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: calc(50% + 125px);
+
+    span {
+        font-family: "Work Sans";
+        font-weight: 400;
+    }
+
+    &:hover {
+        color: $color1;
+    }
+}
+
+.update_projects_hidden {
+    display: none;
+}
+
+.gallery {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-top: 50px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

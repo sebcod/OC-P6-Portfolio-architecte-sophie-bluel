@@ -1,0 +1,45 @@
+#contact {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 70px;
+
+    &>* {
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    & input[type="text"],
+    & input[type="email"],
+    & textarea {
+        padding: 0 15px;
+        font-family: "Work Sans";
+        height: 50px;
+        box-shadow: $boxShadow;
+        border: none;
+
+        &:focus {
+            outline: solid 1px $color1;
+        }
+    }
+
+    & form {
+        text-align: left;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & label {
+        margin: 2em 0 0.5em 0;
+        font-weight: 500;
+    }
+
+    & textarea {
+        padding: 10px;
+        height: 174px;
+        resize: none;
+    }
+}

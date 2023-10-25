@@ -1,0 +1,20 @@
+footer {
+    max-width: 1440px;
+    width: 100%;
+    background: $colorWhite;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+}
+
+footer nav ul {
+    margin: 2em;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: 300;
+
+    li:hover {
+        cursor: pointer;
+        color: $color1;
+    }
+}

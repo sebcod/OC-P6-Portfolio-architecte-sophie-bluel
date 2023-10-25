@@ -1,0 +1,20 @@
+.banner_edit_mode {
+    z-index: -2;
+    color: $colorWhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    max-width: 1440px;
+    width: 100%;
+    background: $color_Bg_Header_Mode_Edition;
+
+    span {
+        font-family: "Work Sans";
+        font-weight: 400;
+    }
+}
+
+.banner_edit_mode_hidden {
+    display: none;
+}

@@ -1,0 +1,218 @@
+.modal-create-delete-works {
+    z-index: 10;
+    position: fixed;
+    top: 50vh;
+    transform: translateY(-50%);
+    width: 630px;
+    min-height: 688px;
+    border-radius: 10px;
+    box-shadow: $boxShadow;
+    background: $colorWhite;
+    text-align: center;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 26px 30px 13px;
+        font-size: 1.5em;
+
+        .cross-modal {
+            margin-left: auto;
+        }
+    }
+
+    /* ------------------- body delete ------------------- */
+    &__body-delete {
+        //border: solid 1px;
+        margin: 0;
+
+        h2 {
+            margin-bottom: 46px;
+            //border: solid 1px;
+        }
+
+        .delete-works-thumbnails-container {
+            margin: auto;
+            width: 420px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-auto-rows: 1fr;
+            grid-column-gap: 6px;
+            grid-row-gap: 30px;
+            align-content: center;
+            margin-bottom: 65px;
+
+            figure {
+                position: relative;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+                .icon_delete {
+                    position: absolute;
+                    right: 5px;
+                    top: 5px;
+                    width: 17px;
+                    height: 17px;
+                    background: $colorBlack;
+                    border-radius: 5px;
+
+                    i {
+                        position: relative;
+                        top: 0.5px;
+                        color: $colorWhite;
+                        font-size: 0.7em;
+                    }
+                }
+            }
+        }
+
+        .btn-add-works {
+            margin-bottom: 45px;
+        }
+    }
+
+    /* ------------------- body create ------------------- */
+    &__body-create {
+        //border: solid 1px red;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+
+    &__body-create {
+        text-align: center;
+        margin: 0;
+
+        h2 {
+            margin-bottom: 46px;
+            font-size: 26px;
+            font-weight: 400;
+        }
+
+        form {
+            justify-content: space-between;
+            margin: auto;
+            width: 420px;
+            height: 420px;
+            margin-bottom: 45px;
+
+            .drop-zone-img {
+                width: 100%;
+                height: 169px;
+                border-radius: 10px;
+                user-select: none;
+                background: $color_Bg_input_img_modal;
+
+                .thumbnailInputImg {
+                    height: 100%;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+                }
+
+                i {
+                    margin-top: 20px;
+                    font-size: 70px;
+                    margin-bottom: 10px;
+                    color: $color_Bg_btn_input_img_modal;
+                }
+
+                .btn-add-img {
+                    width: 173px;
+                    height: 36px;
+                    border-radius: 50px;
+                    background: $color_Bg_btn_input_img_modal;
+                    color: $color_texte_btn_input_img_modal;
+                    font-weight: 500;
+                    font-size: 1em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: auto;
+                    margin-bottom: 7px;
+
+                }
+
+                .btn-add-file+p {
+                    color: $color_texte_grey_input_img_modal;
+                    font-size: 10px;
+                    font-weight: 400;
+                    margin-bottom: 19px;
+                }
+
+            }
+
+            .add-img-category,
+            .add-img-titre {
+                display: grid;
+                width: 100%;
+                text-align: left;
+                color: $color_texte2_grey_input_img_modal;
+                font-size: 1em;
+                font-weight: 500;
+
+                label {
+                    padding-bottom: 10px;
+                }
+
+                input,
+                select {
+                    height: 50px;
+                    padding: 0px 10px;
+                    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+                    border: none;
+
+                    &:hover {
+                        box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+                    }
+
+                    &:focus {
+                        outline: solid 1px $color_Bg_btn_input_img_modal;
+                    }
+                }
+
+                select {
+                    cursor: pointer;
+                }
+            }
+
+            .img-warning,
+            .title-warning,
+            .category-warning {
+                margin-left: 1rem;
+                color: red;
+            }
+        }
+
+        .btn-add-works-validate {
+            background: $color_bg_btn_grey_input_img_modal;
+            width: 237px;
+            height: 36px;
+            border-radius: 60px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+
+    .modal__line {
+        width: 420px;
+        height: 1px;
+        background: $color_Bg_ligne_modal;
+        margin: auto;
+    }
+}

@@ -1,0 +1,25 @@
+body {
+    max-width: 1440px;
+    min-height: 100vh;
+    font-family: "Work Sans";
+    font-size: 14px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: -2;
+    background: $colorBg;
+    box-shadow: $boxShadow;
+
+    &::before {
+        content: "";
+        height: 100%;
+        max-width: 950px;
+        width: 90%;
+        border-left: 1px solid $color1;
+        border-Right: 1px solid $color1;
+        position: absolute;
+        z-index: -1;
+    }
+}

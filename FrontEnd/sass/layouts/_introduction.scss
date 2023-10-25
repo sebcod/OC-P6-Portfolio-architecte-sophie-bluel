@@ -1,0 +1,30 @@
+#introduction {
+    //border: solid 1px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 140px;
+}
+
+#introduction figure {
+    flex: 1;
+    margin-right: 72px;
+}
+
+#introduction img {
+
+    display: block;
+    //margin: auto;
+    max-width: 474px;
+}
+
+#introduction article {
+    flex: 1;
+}
+
+#introduction h2 {
+    margin-bottom: 1em;
+}
+
+#introduction p {
+    margin-bottom: 0.5em;
+}
