@@ -174,6 +174,8 @@ html {
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
   background: white;
   text-align: center;
+  /* ------------------- body delete ------------------- */
+  /* ------------------- body create ------------------- */
 }
 .modal-create-delete-works__header {
   display: flex;
@@ -195,6 +197,7 @@ html {
   width: 420px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
   grid-column-gap: 6px;
   grid-row-gap: 30px;
   align-content: center;
@@ -202,11 +205,15 @@ html {
 }
 .modal-create-delete-works__body-delete .delete-works-thumbnails-container figure {
   position: relative;
-  height: -moz-fit-content;
-  height: fit-content;
+}
+.modal-create-delete-works__body-delete .delete-works-thumbnails-container figure:hover {
+  cursor: pointer;
 }
 .modal-create-delete-works__body-delete .delete-works-thumbnails-container figure img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .modal-create-delete-works__body-delete .delete-works-thumbnails-container figure .icon_delete {
   position: absolute;
@@ -226,11 +233,11 @@ html {
 .modal-create-delete-works__body-delete .btn-add-works {
   margin-bottom: 45px;
 }
-.modal-create-delete-works .modal__line {
-  width: 420px;
-  height: 1px;
-  background: #B3B3B3;
-  margin: auto;
+.modal-create-delete-works__body-create form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .modal-create-delete-works__body-create {
   text-align: center;
@@ -238,11 +245,115 @@ html {
 }
 .modal-create-delete-works__body-create h2 {
   margin-bottom: 46px;
+  font-size: 26px;
+  font-weight: 400;
 }
-.modal-create-delete-works__body-create .works__container {
-  border: solid 1px;
+.modal-create-delete-works__body-create form {
+  justify-content: space-between;
+  margin: auto;
   width: 420px;
   height: 420px;
+  margin-bottom: 45px;
+}
+.modal-create-delete-works__body-create form .drop-zone-img {
+  width: 100%;
+  height: 169px;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  background: #e8f1f6;
+}
+.modal-create-delete-works__body-create form .drop-zone-img .thumbnailInputImg {
+  height: 100%;
+}
+.modal-create-delete-works__body-create form .drop-zone-img:hover {
+  cursor: pointer;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.05);
+}
+.modal-create-delete-works__body-create form .drop-zone-img i {
+  margin-top: 20px;
+  font-size: 70px;
+  margin-bottom: 10px;
+  color: #CBD6DC;
+}
+.modal-create-delete-works__body-create form .drop-zone-img .btn-add-img {
+  width: 173px;
+  height: 36px;
+  border-radius: 50px;
+  background: #CBD6DC;
+  color: #306685;
+  font-weight: 500;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 7px;
+}
+.modal-create-delete-works__body-create form .drop-zone-img .btn-add-file + p {
+  color: #444;
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 19px;
+}
+.modal-create-delete-works__body-create form .add-img-category,
+.modal-create-delete-works__body-create form .add-img-titre {
+  display: grid;
+  width: 100%;
+  text-align: left;
+  color: #3D3D3D;
+  font-size: 1em;
+  font-weight: 500;
+}
+.modal-create-delete-works__body-create form .add-img-category label,
+.modal-create-delete-works__body-create form .add-img-titre label {
+  padding-bottom: 10px;
+}
+.modal-create-delete-works__body-create form .add-img-category input,
+.modal-create-delete-works__body-create form .add-img-category select,
+.modal-create-delete-works__body-create form .add-img-titre input,
+.modal-create-delete-works__body-create form .add-img-titre select {
+  height: 50px;
+  padding: 0px 10px;
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.09);
+  border: none;
+}
+.modal-create-delete-works__body-create form .add-img-category input:hover,
+.modal-create-delete-works__body-create form .add-img-category select:hover,
+.modal-create-delete-works__body-create form .add-img-titre input:hover,
+.modal-create-delete-works__body-create form .add-img-titre select:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+}
+.modal-create-delete-works__body-create form .add-img-category input:focus,
+.modal-create-delete-works__body-create form .add-img-category select:focus,
+.modal-create-delete-works__body-create form .add-img-titre input:focus,
+.modal-create-delete-works__body-create form .add-img-titre select:focus {
+  outline: solid 1px #CBD6DC;
+}
+.modal-create-delete-works__body-create form .add-img-category select,
+.modal-create-delete-works__body-create form .add-img-titre select {
+  cursor: pointer;
+}
+.modal-create-delete-works__body-create form .img-warning,
+.modal-create-delete-works__body-create form .title-warning,
+.modal-create-delete-works__body-create form .category-warning {
+  margin-left: 1rem;
+  color: red;
+}
+.modal-create-delete-works__body-create .btn-add-works-validate {
+  background: #a7a7a7;
+  width: 237px;
+  height: 36px;
+  border-radius: 60px;
+  font-size: 14px;
+  font-weight: 700;
+}
+.modal-create-delete-works .modal__line {
+  width: 420px;
+  height: 1px;
+  background: #B3B3B3;
+  margin: auto;
 }
 
 input[type=submit] {
@@ -468,6 +579,7 @@ main {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
   margin-top: 50px;
@@ -475,6 +587,9 @@ main {
 
 .gallery img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #contact {

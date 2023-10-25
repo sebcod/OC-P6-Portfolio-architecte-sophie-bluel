@@ -18,36 +18,74 @@
     <link rel="stylesheet" href="./sass/main.css" />
   </head>
   <body id="body">
+    <!-- --------------- blur Modal ---------------------------- -->
     <div class="backdropFilter hidden"></div>
+
+    <!-- --------------- Modal ---------------------------- -->
     <div class="modal-create-delete-works hidden">
       <nav class="modal-create-delete-works__header">
         <i class="fa-solid fa-arrow-left arrow-left-modal hidden"></i>
         <i class="fa-solid fa-xmark cross-modal"></i>
       </nav>
+
+      <!-- --------------- Modal section delete ---------------------------- -->
       <section class="modal-create-delete-works__body-delete">
         <h2>Galerie photo</h2>
         <div class="delete-works-thumbnails-container"></div>
         <div class="modal__line"></div>
         <input type="submit" value="Ajouter une photo" class="btn-add-works" />
       </section>
+
+      <!-- --------------- Modal section create ---------------------------- -->
       <section class="modal-create-delete-works__body-create hidden">
         <h2>Ajout photo</h2>
-        <form action="">
-          <input type="image" />
-          <label for="title">Titre</label>
-          <input type="text" id="title" />
-          <label for="category-select">Catégorie</label>
-          <select name="category" id="category-select">
-            <option value="">Catégorie</option>
-          </select>
+        <form action="#">
+          <!-- input img -->
+          <label for="input-img" class="drop-zone-img">
+            <img src="" alt="" class="thumbnailInputImg hidden" />
+            <div class="drop-zone-content">
+              <i class="fa-regular fa-image"></i>
+              <span class="btn-add-img">+ Ajouter photo</span>
+              <span>jpg, png : 4mo max</span>
+            </div>
+          </label>
+          <div class="img-warning"></div>
+          <input
+            type="file"
+            accept="image/png, image/jpeg"
+            id="input-img"
+            hidden
+          />
+          <!-- input title -->
+          <div class="add-img-titre">
+            <label for="title">Titre<span class="title-warning"></span></label>
+            <input
+              type="text"
+              id="input-title"
+              placeholder="Choisir un titre"
+            />
+          </div>
+          <!-- input category -->
+          <div class="add-img-category">
+            <label for="category-select"
+              >Catégorie<span class="category-warning"></span
+            ></label>
+            <select name="category" id="category-select">
+              <option value="">Choisir une catégorie</option>
+            </select>
+          </div>
         </form>
         <div class="modal__line"></div>
         <input type="submit" value="Valider" class="btn-add-works-validate" />
       </section>
     </div>
+
+    <!-- --------------- banner edit mode ---------------------------- -->
     <div class="banner_edit_mode">
       <i class="fa-solid fa-pen-to-square"> <span>Mode édition</span></i>
     </div>
+
+    <!-- --------------- header ---------------------------- -->
     <header class="header">
       <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
       <nav>
@@ -61,7 +99,9 @@
         </ul>
       </nav>
     </header>
+    <!-- --------------- main ---------------------------- -->
     <main>
+      <!-- --------------- section introduction ---------------------------- -->
       <section id="introduction">
         <figure>
           <img src="./assets/images/sophie-bluel.png" alt="" />
@@ -85,6 +125,7 @@
           </p>
         </article>
       </section>
+      <!-- --------------- section portfolio ---------------------------- -->
       <section id="portfolio">
         <div class="portfolio_container">
           <h2>Mes Projets</h2>
@@ -99,10 +140,11 @@
         <!-- Galerie vidée pour être rempli en Javascript -->
         <div class="gallery"></div>
       </section>
+      <!-- --------------- section contact ---------------------------- -->
       <section id="contact">
         <h2>Contact</h2>
         <p>Vous avez un projet ? Discutons-en !</p>
-        <form action="" method="">
+        <form action="#">
           <label for="name">Nom</label>
           <input type="text" name="name" id="name" />
           <label for="email">E-mail</label>
@@ -114,6 +156,7 @@
       </section>
     </main>
 
+    <!-- --------------- footer ---------------------------- -->
     <footer>
       <nav>
         <ul>
@@ -122,11 +165,14 @@
       </nav>
     </footer>
 
+    <!-- --------------- scripts ---------------------------- -->
     <script src="./scripts/getAllWorks.js"></script>
+    <script src="./scripts/getAllCategory.js"></script>
     <script src="./scripts/homepage_edit_mode.js"></script>
     <script src="./scripts/setFiltersWorks.js"></script>
     <script src="./scripts/deleteWork.js"></script>
+    <script src="./scripts/createWork.js"></script>
     <script src="./scripts/modal_create_delete.js"></script>
-    <script src="./scripts/main.js"></script>
+    <script src="./scripts/index.js"></script>
   </body>
 </html>

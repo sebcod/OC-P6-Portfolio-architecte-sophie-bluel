@@ -1,4 +1,4 @@
-// gestion de la modale create delete
+// gestion de la modale creation et suppression
 
 const modal_create_delete = () => {
   // récupération du bouton modifier, du blur noir et de la modale
@@ -37,7 +37,6 @@ const modal_create_delete = () => {
   // ouverture de la section create
   btn_add_works.addEventListener("click", () => {
     modal_body_delete.classList.add("hidden");
-    console.log(modal_body_delete);
     modal_body_create.classList.remove("hidden");
     modal_arrow_left.classList.remove("hidden");
   });
@@ -45,11 +44,13 @@ const modal_create_delete = () => {
   // retour à la section delete
   modal_arrow_left.addEventListener("click", () => {
     modal_body_delete.classList.remove("hidden");
-    console.log(modal_body_delete);
     modal_body_create.classList.add("hidden");
     modal_arrow_left.classList.add("hidden");
   });
 
   // affichage des travaux en miniatures à supprimer dans la modale
   display_delete_works_container_thumbnails();
+
+  // gestion de la création d'un nouveau travail
+  createWork();
 };

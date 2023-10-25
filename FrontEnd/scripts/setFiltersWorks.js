@@ -13,7 +13,7 @@ const setFiltersWorks = () => {
   // Récupération des catégories à filtrer
   array_All_Works.forEach((work) => arrayOfCategory.add(work.category.name));
 
-  // Création des boutons à partir catégories récupérées
+  // Création des boutons à partir des catégories récupérées
   arrayOfCategory.forEach((category) => {
     const btnFilter = document.createElement("input");
     btnFilter.setAttribute("type", "submit");

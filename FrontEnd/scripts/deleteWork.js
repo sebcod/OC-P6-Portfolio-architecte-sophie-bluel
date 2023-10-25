@@ -34,6 +34,7 @@ const display_delete_works_container_thumbnails = () => {
   const delete_works_container_thumbnails = document.querySelector(
     ".delete-works-thumbnails-container"
   );
+  // affichage des minatures avec leurs data-id
   delete_works_container_thumbnails.innerHTML = array_All_Works
     .map(
       (thumbnails_work) =>
