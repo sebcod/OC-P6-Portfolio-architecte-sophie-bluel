@@ -12,14 +12,14 @@ body {
     background: $colorBg;
     box-shadow: $boxShadow;
 
-    &::before {
-        content: "";
-        height: 100%;
-        max-width: 950px;
-        width: 90%;
-        border-left: 1px solid $color1;
-        border-Right: 1px solid $color1;
-        position: absolute;
-        z-index: -1;
-    }
+    // &::before {
+    //     content: "";
+    //     height: 100%;
+    //     max-width: 950px;
+    //     width: 90%;
+    //     border-left: 1px solid $color1;
+    //     border-Right: 1px solid $color1;
+    //     position: absolute;
+    //     z-index: -1;
+    // }
 }

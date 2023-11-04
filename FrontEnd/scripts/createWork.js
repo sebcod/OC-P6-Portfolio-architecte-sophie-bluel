@@ -1,8 +1,8 @@
 // create work
 const createWork = () => {
-  // récupération du bouton input img et de son label : la zone de drop
+  // récupération du bouton input img et de son label (la zone de drop)
   // récupération de l'input titre
-  // on test si une catégories est selectionnée
+  // récupération de catégories select
   const inputImg = document.querySelector("#input-img");
   const dropZoneImg = document.querySelector(".drop-zone-img");
   const inputTitle = document.querySelector("#input-title");
@@ -109,7 +109,6 @@ const createWork = () => {
     bodyData.append("image", inputImg.files[0]);
     bodyData.append("title", inputTitle.value);
     bodyData.append("category", inputCategory.value);
-    console.log(bodyData);
 
     await fetch("http://localhost:5678/api/works", {
       method: "POST",

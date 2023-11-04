@@ -12,7 +12,7 @@ const modal_create_delete = () => {
   const modal_arrow_left = document.querySelector(".arrow-left-modal");
   const btn_add_works = document.querySelector(".btn-add-works");
 
-  // récupération des sections delete et create de la modale
+  // récupération des sections delete et create, de la modale
   const modal_body_delete = document.querySelector(
     ".modal-create-delete-works__body-delete"
   );

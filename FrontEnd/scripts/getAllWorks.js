@@ -8,7 +8,6 @@ const getAllWorks = async () => {
       return res.json();
     })
     .then((res_json) => (array_All_Works = res_json));
-
   // on met à jour la gallerie de la page d'accueil
   gallery.innerHTML = array_All_Works
     .map(

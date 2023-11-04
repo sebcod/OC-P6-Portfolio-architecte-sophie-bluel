@@ -2,6 +2,7 @@
 // récupération du token JWT
 
 const login = () => {
+  // récupération du bouton de la page login
   const btnLogin = document.querySelector("#btnLogin");
 
   btnLogin.addEventListener("click", async (e) => {
@@ -9,8 +10,10 @@ const login = () => {
     const inputPassword = document.querySelector("#password");
     const login_error_message = document.querySelector(".login_error_message");
 
+    // pour ne pas recharger la page
     e.preventDefault();
 
+    // demande du token à API
     await fetch("http://localhost:5678/api/users/login", {
       method: "POST",
       headers: {

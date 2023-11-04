@@ -13,7 +13,7 @@ const setFiltersWorks = () => {
   // Récupération des catégories à filtrer
   array_All_Works.forEach((work) => arrayOfCategory.add(work.category.name));
 
-  // Création des boutons à partir des catégories récupérées
+  // Création des boutons à partir des catégories récupérées dans array_All_Works
   arrayOfCategory.forEach((category) => {
     const btnFilter = document.createElement("input");
     btnFilter.setAttribute("type", "submit");
@@ -28,8 +28,8 @@ const setFiltersWorks = () => {
     "#portfolio input[type='submit']"
   );
 
-  // on parcour le tableau des filtres
-  // ajout d'un evenement au clique
+  // on parcour les boutons filtres
+  // on ajout d'un evenement au clique
   // affichage les travaux de la catégories selectionnée
   filterBtns.forEach((filterBtn) => {
     filterBtn.addEventListener("click", () => {
